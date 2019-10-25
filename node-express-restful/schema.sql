@@ -8,17 +8,18 @@ CREATE TABLE products (
     prd_price  FLOAT,
     PRIMARY KEY (prd_id)
 );
-ALTER TABLE orders AUTO_INCREMENT=1001;
 
 DROP TABLE IF EXISTS  orders;
 CREATE TABLE orders (
     ord_id		INT(10) NOT NULL AUTO_INCREMENT,
-    ord_date	DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ord_date	DATETIME,
     prd_id		INT(10) NOT NULL,
     prd_price   FLOAT,
     PRIMARY KEY (ord_id)
 );
 ALTER TABLE orders AUTO_INCREMENT=10001;
+ALTER TABLE orders CHANGE ord_date datetime NOT NULL DEFAULT 'CURRENT_TIMESTAMP'
+
 
 
 INSERT INTO products (prd_name, prd_price) VALUES ('Product 1', 1199.95);
