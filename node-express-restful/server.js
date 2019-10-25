@@ -1,7 +1,7 @@
 import http from 'http'
 import app from './app'
 
-//Use system configuration for port or use 6001 by default.
+//Use system configuration for port or use 6001 by default. test
 const port = process.env.port || 6001
 
 //Create server with exported express app
