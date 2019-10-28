@@ -12,6 +12,7 @@ class CounterApp extends React.Component {
   // 元件 "已經 Did" 呈現在網頁上
   async componentDidMount() {
     try {
+      // 目前沒有使用
       //await this.setState({ loading: true })
 
       const response = await fetch('http://localhost:5555/counter/1', {
