@@ -5,14 +5,14 @@ class CounterApp extends React.Component {
     super()
     this.state = {
       total: 0,
-      loading: false,
+      loading: true,
     }
   }
 
   // 元件 "已經 Did" 呈現在網頁上
   async componentDidMount() {
     try {
-      await this.setState({ loading: true })
+      //await this.setState({ loading: true })
 
       const response = await fetch('http://localhost:5555/counter/1', {
         method: 'GET',
